@@ -1,9 +1,11 @@
-#groupList, #memberList {
-    margin-bottom: 20px;
+body {
+    font-family: Arial, sans-serif;
 }
 
-#excelFile iframe {
-    width: 100%;
+#excel-view {
+    margin-top: 20px;
     height: 500px;
-    border: none;
+    overflow: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
