@@ -48,3 +48,23 @@ function loadExcel(memberName) {
     iframe.src = excelFiles[memberName];
     excelFile.appendChild(iframe);
 }
+function showExcel(memberName) {
+    var excelViewer = document.getElementById('excelViewer');
+    excelViewer.innerHTML = '';
+
+    // Đường dẫn đến tệp Excel của thành viên
+    var excelFilePath = 'files' + memberName + '.xlsx';
+
+    // Tạo một iframe và nhúng Google Sheets Viewer hoặc Microsoft Office Online Viewer
+    var iframe = document.createElement('iframe');
+    iframe.style.width = '100%';
+    iframe.style.height = '500px';
+    iframe.src = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(excelFilePath);
+    excelViewer.appendChild(iframe);
+}
+
+// Hàm này được gọi khi người dùng chọn một thành viên từ danh sách
+function loadExcel(memberName) {
+    // Gọi hàm showExcel với tên thành viên được chọn
+    showExcel(memberName);
+}
