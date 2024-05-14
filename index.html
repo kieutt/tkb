@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>XEM THỜI KHÓA BIỂU</title>
-<link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <title>Xem TKB của Giáo viên</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
-  <center>
-    <div id="groupList"></div>
-    <div id="memberList"></div>
-    <div id="excelViewer"></div>
-  </center>
-<script src="js/script.js"></script>
+    <h1>Chọn Tổ / Nhóm chuyên môn:</h1>
+    <form action="members.php" method="post">
+        <label for="group">Tổ / Nhóm:</label>
+        <select id="group" name="group">
+            <option value="tin">Tin</option>
+            <option value="group2">Group 2</option>
+            <option value="group3">Group 3</option>
+        </select>
+        <button type="submit">View Members</button>
+    </form>
+    <div id="excel-view"></div>
+    <script src="js/script.js"></script>
 </body>
 </html>
