@@ -1,0 +1,26 @@
+<?php
+$group = $_POST['group'];
+$members = [
+    'tin' => ['Kiều', 'Member 2', 'Member 3'],
+    'group2' => ['Member 4', 'Member 5', 'Member 6'],
+    'group3' => ['Member 7', 'Member 8', 'Member 9'],
+];
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Group Members</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Members of <?php echo $group; ?></h1>
+    <ul id="member-list">
+        <?php foreach ($members[$group] as $member): ?>
+            <li><?php echo $member; ?></li>
+        <?php endforeach; ?>
+    </ul>
+    <div id="excel-view"></div>
+    <script src="script.js"></script>
+</body>
+</html>
