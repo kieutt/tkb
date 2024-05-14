@@ -1,0 +1,9 @@
+#groupList, #memberList {
+    margin-bottom: 20px;
+}
+
+#excelFile iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
